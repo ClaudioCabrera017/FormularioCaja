@@ -1,0 +1,19 @@
+import React, { useState } from 'react';
+import './App.css';
+import Caja from './Caja';
+import Canvas from './Canvas';
+
+function App() {
+
+  const [colorcaja, setColorcaja] = useState([])
+  console.log(colorcaja, "INFO DESDE  AL APP.JS")
+
+  return (
+    <div className="App">
+      <Caja colorcaja={colorcaja} setColorcaja={setColorcaja}   />
+      <Canvas color={colorcaja}/>
+    </div>
+  );
+}
+
+export default App;
