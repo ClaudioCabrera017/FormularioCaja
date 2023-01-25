@@ -1,0 +1,24 @@
+import React from 'react'
+
+const Canvas = ({color}) => {
+    console.log(color, "si llega el color")
+    return (
+    <div>
+        <h1> Bloques  de colores</h1>
+        {
+            color.map((pintura, index)=>(
+                <div key={index} style={{ 
+                    backgroundColor: pintura,
+                        height:'100px',
+                        width:'400px',
+                        margin:"2px" ,
+                        display:"inline-block" }} >
+
+                </div>
+            ))
+        }
+    </div>
+  )
+}
+
+export default Canvas
