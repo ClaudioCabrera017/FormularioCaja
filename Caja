@@ -1,0 +1,27 @@
+import React, {useState} from  'react';
+
+const Caja = ({colorcaja, setColorcaja}) => {
+
+    // const {colorCaja, setColorcaja} = props
+    const [color, setColor] = useState("")
+    // console.log(colorcaja, "COLOR CAJA DESDE caja component")
+
+    const createcolor = (e) => {
+        e.preventDefault();
+        const newUser =  {color} 
+        console.log("Welcome", newUser);
+        setColorcaja([...colorcaja, color])
+    };
+    return (
+        <form onSubmit={ createcolor }>
+    <div>
+        <label>Color: </label> 
+        <button type="submit" >Add</button>
+            <input type="text" onChange={ (e) => setColor(e.target.value) } />
+            
+
+    </div>
+    </form>
+    )
+}
+export default Caja;
